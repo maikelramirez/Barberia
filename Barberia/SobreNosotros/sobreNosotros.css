@@ -1,0 +1,276 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Qwigley&family=Sixtyfour&family=UnifrakturMaguntia&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-image: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; /* Asegura suficiente altura vertical */
+  }
+  
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
+    z-index: -1; /* Coloca la capa detrás de todo el contenido */
+  }
+
+
+/* creacion de la barra de navegacion responsive de la pagina  */
+
+header{
+    position: fixed;
+      background-color: #ffffff;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .5rem 2rem;
+      z-index: 1000;
+      width: 100%;
+  }
+  
+  .header_logo img{
+      width: 100px;
+      margin-left: 50px;
+      user-select: none;
+  }
+  
+  .nav_menu ul{
+      display: flex;
+      align-items: center;
+  }
+  
+  .nav_menu li{
+      margin-right: 1rem;
+      list-style:none;
+  }
+  
+  .nav_menu a{
+    font-family: Arial, Helvetica, sans-serif;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      cursor: pointer;
+      margin: 10px;
+  }
+  
+  .nav_menu li:last-child{
+      background: #D4AF37;
+      padding: .25rem .75rem;
+      border-radius: 2rem;
+  }
+  
+  
+  
+  .menu_icon img{
+      margin-top: 20px;
+      width: 35px;
+      height: 35px;
+      border-radius: 2px;
+  }
+  
+  .menu_icon, #check{
+      display: none;
+  } 
+  
+  @media (max-width:768px){
+      .checkbtn{
+          display: block;
+      }
+  
+      .menu_icon{
+          display: block;
+          position: fixed;
+          top: 20px;
+          right: 20px;
+      }
+  
+      .nav_menu ul{
+          display: block;
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          background: #ffffff;
+          width: 100%;
+          height: 100vh;
+          right: 0;
+          z-index: 1000;
+          transition: all 1s ease;
+  
+      }
+  
+      .nav_menu ul li {
+          padding: 2rem;
+          display: flex;
+          justify-content: center;
+          margin: 0;
+      }
+  
+   
+  
+      .nav_menu ul li:last-child{
+          background: none;
+          padding: 1rem;
+          
+      }
+  
+      #check:checked  ~ ul{
+          left: 0;
+      }
+  
+  
+  }
+  /* creacion de la barra de navegacion responsive de la pagina  */
+
+
+
+
+/* creacion del cuerpo del documento actual y sus estilos */
+  .contenedor-principal {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Cambiado a column para centrar verticalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 0 auto; /* Ajusta el valor superior según tus necesidades */
+    width: 80%;
+    position: relative;
+    top: 300px;
+  }
+
+  
+  
+  .work-hours-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .work-hours {
+    width: 40%;
+    height: 500px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .work-hours h2{
+      font-size: 40px;
+      user-select: none;
+      text-align: center;
+      font-family: "Qwigley", cursive;
+      color:  #D4AF37;
+      text-shadow:  10px 20px 6px black;
+      margin-bottom: 45px;
+    }
+    
+    .work-hours p{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+
+    .btnAgendar{
+        display: block;
+        text-decoration: none;
+        color: white;
+        width: 60%;
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 50px;
+        border: 2px solid #D4AF37;
+        color: #D4AF37;
+    }
+
+    .btnAgendar:hover{
+        color: white;
+        background-color: #D4AF37;
+        transition: all 0.5s;
+    }
+    
+    .reason-to-choose {
+        width: 40%;
+        margin: 0 auto;
+        color: white; /* Agregado para centrar .reason-to-choose */
+    }
+    
+    .reason-to-choose h2 {
+      width: 90%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  
+  .reason-to-choose p {
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .reason-to-choose ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .reason-to-choose li {
+    margin-bottom: 10px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  
+  .reason-to-choose ul li::before {
+    content: "\2713"; 
+    color: #008000; 
+    font-size: 1.2em; 
+    margin-right: 5px; 
+  }
+  .reason-to-choose img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+  
+/* creacion del cuerpo del documento actual y sus estilos */
+
+
+
+  
+/* responsive de todo este documento de sobreNosotros */
+  @media (max-width: 768px) {
+    .contenedor-principal {
+      order: 2; /* Coloca el cuadro blanco abajo en modo responsive */
+      width: 90%; /* Ajusta el ancho para dispositivos más pequeños */
+      top: 150px; /* Ajusta la posición superior según tus necesidades */
+    }
+  
+    .work-hours {
+      order: 1; /* Coloca el cuadro de horas de trabajo arriba en modo responsive */
+      width: 90%; /* Ajusta el ancho para dispositivos más pequeños */
+      height: auto; /* Ajusta la altura para dispositivos más pequeños */
+    }
+  
+    .btnAgendar {
+      width: 80%; /* Ajusta el ancho del botón para dispositivos más pequeños */
+    }
+  
+    .reason-to-choose {
+      width: 100%; /* Ajusta el ancho para dispositivos más pequeños */
+    }
+  }
+    
+/* responsive de todo este documento de sobreNosotros */

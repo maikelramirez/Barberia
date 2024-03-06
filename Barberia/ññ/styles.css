@@ -1,0 +1,73 @@
+/* Estilo de la fila de tarjetas */
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo de cada tarjeta */
+.card {
+    width: 300px;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la imagen de fondo */
+.card-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo del fondo oscurecido al hacer hover */
+.card-image .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscurecido */
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 10px;
+}
+
+/* Estilo de la descripción y el botón */
+.card-image:hover .card-overlay {
+    opacity: 1; /* Mostrar el fondo oscurecido en hover */
+}
+
+.card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Color del texto */
+}
+
+.card-content h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.card-content p {
+    font-size: 16px;
+}
+
+.card-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6600; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.card-content a:hover {
+    background: #ff3300; /* Cambiar el color de fondo en hover */
+}

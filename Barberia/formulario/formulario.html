@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+    <link rel="shortcut icon" href="../img/klipartz.com.png">
+    <!-- <link rel="stylesheet" href="../css/estilos.css"> -->
+</head>
+<body>
+
+    <header class="header">
+        <div class="header_logo">
+            <img src="../img/klipartz.com.png" alt="">
+        </div>
+
+        <div class="nav_menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="menu_icon"><img src="img/menu.svg" alt=""></i>
+            </label>
+
+
+
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="#">Quienes somos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contactos</a></li>
+                    <li><a href="#">Mas</a></li>
+                </ul>
+        </div>
+    </header>
+
+
+    <form id="citaForm">
+        <label for="fecha">Seleccionar Fecha para agendar:</label>
+        <input type="date" id="fecha" name="fecha" required>
+    
+        <label for="horario">Seleccionar Horario:</label>
+        <input type="time" id="horario" name="horario" required>
+    
+        <label for="clienteNuevo">¿Eres cliente nuevo?</label>
+        <select id="clienteNuevo" name="clienteNuevo">
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+    
+        <label for="servicio">Seleccionar Servicio:</label>
+        <select id="servicio" name="servicio">
+          <option value="corte">Corte de Pelo</option>
+          <option value="afeitado">Afeitado</option>
+          <option value="color">Coloración</option>
+          <!-- Agrega más opciones según tus servicios -->
+        </select>
+    
+        <label for="barbero">Seleccionar Barbero:</label>
+        <select id="barbero" name="barbero">
+          <option value="juan">Juan</option>
+          <option value="maria">Maria</option>
+          <option value="pedro">Pedro</option>
+          <!-- Agrega más opciones según tus barberos -->
+        </select>
+    
+        <button type="button" onclick="enviarFormulario()">Enviar</button>
+      </form>
+    
+      <script>
+        function enviarFormulario() {
+          // Aquí puedes agregar la lógica para enviar los datos del formulario
+          alert("Formulario enviado correctamente");
+        }
+      </script>
+</body>
+</html>
+
+
